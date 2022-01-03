@@ -1,0 +1,17 @@
+// [python quickstart](https://grpc.io/docs/quickstart/python.html#run-a-grpc-application)
+//  python -m grpc_tools.protoc --python_out=../util/ --grpc_python_out=../util/ -I. hello.proto
+
+// hello.proto
+syntax = "proto3";
+
+service Greeter {
+  rpc SayHello(SayHelloRequest) returns (SayHelloReply) {}
+}
+
+message SayHelloRequest {
+  string name = 1;
+}
+
+message SayHelloReply {
+  string message = 1;
+}
